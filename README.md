@@ -38,7 +38,7 @@ It supports user registration, email OTP verification, login, and role-based acc
 ### 1. Clone the Repository
 
 ```
-git clone 
+git clone https://github.com/Shreya1999Kayal/role-based-auth-with-email-verify-assignment-2
 cd role-based-auth-assignment-2
 ```
 
