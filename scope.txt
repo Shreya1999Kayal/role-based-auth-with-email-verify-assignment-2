@@ -1,0 +1,165 @@
+Role-Based Authentication System with Email OTP Verification using Express.js and MongoDB
+
+
+Project Objective:
+Build a secure authentication system that allows users to register, verify their email using OTP, log in, and access protected routes based on assigned roles (e.g., admin, user).
+
+
+ Deliverables:
+·       Backend REST API with role-based access control
+
+·       OTP-based email verification system
+
+·       JWT-based authentication
+
+·       MongoDB data models for user and OTP
+
+·       Full API documentation (Postman collection or README)
+
+Project Setup & Basic User Authentication
+Goals:
+·       Set up project structure and install dependencies
+
+·       Create MongoDB connection
+
+·       Build user registration and login endpoints
+
+·       Secure passwords using hashing
+
+·       Generate JWT tokens upon login
+
+ Features:
+·       User schema with name, email, password, role, isVerified
+
+·       Basic routes: /register, /login
+
+·       Environment variable setup (.env)
+
+·       Project structured into MVC (Model-View-Controller) pattern
+
+
+
+
+
+
+
+Email OTP Verification System
+ Goals:
+·       Generate OTP and send via email upon registration
+
+·       Store OTPs temporarily with expiration logic
+
+·       Create OTP verification endpoint
+
+Features:
+·       Generate unique OTP (6-digit or alphanumeric)
+
+·       Email service using SMTP (e.g., Gmail, Mailtrap)
+
+·       OTP verification route: /verify-otp
+
+·       Prevent login if user has not verified OTP
+
+·       Optional: Resend OTP feature
+
+Role-Based Access Control (RBAC)
+ Goals:
+·       Implement route protection using JWT
+
+·       Restrict access based on user roles (user, admin, etc.)
+
+·       Add middleware for authentication and authorization
+
+Features:
+·       Token verification middleware
+
+·       Role-check middleware (e.g., restrict admin routes)
+
+·       Sample protected routes for user and admin
+
+·       Return custom messages for unauthorized access
+
+
+Testing, Documentation & Finalization
+Goals:
+·       Test all endpoints using Postman
+
+·       Write README with setup and usage instructions
+
+·       Ensure security and error handling is complete
+
+·       Optional: Setup a simple frontend (or not)
+
+ Tasks:
+·       Validate edge cases (expired OTP, invalid role, missing token)
+
+·       Finalize .env.example and documentation
+
+·       Export Postman collection (or equivalent)
+
+·       Prepare project for deployment or handoff
+
+Functional Modules Overview
+Auth Module:
+
+Register, login, OTP verify, resend OTP
+
+User Module:
+
+Profile access, role-specific actions
+
+Middleware:
+
+JWT validation, role checking
+
+Email Module:
+
+Sends OTPs using SMTP
+
+Database:
+
+User and OTP collections using MongoDB
+
+Key Functional Requirements
+1. User Registration
+·       Accepts user info
+
+·       Creates account with role
+
+·       Sends OTP to email
+
+2. Email OTP Verification
+·       Accepts OTP
+
+·       Activates account if valid
+
+3. Login
+·       Checks credentials
+
+·       Blocks unverified users
+
+·       Returns JWT token on success
+
+4. Access Control
+·       JWT authentication
+
+·       Role-based route protection
+
+M
+Hash passwords, validate input, secure JWT
+
+Reliability
+
+Retry OTP sending, handle expired codes
+
+Scalability
+
+Modular codebase, role expansion possible
+
+Maintainability
+
+Well-documented and clean code structure
+
+ Environment Configs
+
+Use .env for secrets and SMTP credentials   I am sharing my code check with this.
